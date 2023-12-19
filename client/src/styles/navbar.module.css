@@ -1,0 +1,26 @@
+.nav_red {
+  color: rgb(247, 229, 232);
+  transition: all 2s ease-in-out 1s;
+  border-bottom: 1px solid red;
+}
+
+.nav_black {
+  color: black;
+}
+
+.nav {
+  background-color: rgb(49, 146, 146);
+  padding: 1rem;
+}
+
+.nav_logo {
+  max-width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_logo img {
+  width: 100%;
+  height: auto;
+}

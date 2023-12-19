@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+::selection {
+  background-color: black;
+  color: red;
+}
+
+.toastBody {
+  font-family: "Atlas Grotesk Web", Arial, sans-serif;
+  color: #10171d;
+  font-size: 1.5rem !important;
+}
+
+.container {
+  max-width: 140rem;
+  padding: 2.2rem 2.4rem;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container .logo-brand {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.container .logo-brand a {
+  color: rgb(240, 120, 35);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+nav ul a {
+  font-size: 1.8rem;
+}
+
+nav ul a:hover {
+  color: rgb(118, 226, 9);
+}
+
+nav .hamburger_menu {
+  position: absolute;
+  top: 1.12rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  width: 3.45rem;
+  display: none;
+  height: 2.5rem;
+}
+
+nav .hamburger_menu span {
+  height: 0.4rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  background-color: #fff;
+}
+
+nav ul.open {
+  display: flex;
+}
+
+.layout_outer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 500px) {
+  nav .hamburger_menu {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+}

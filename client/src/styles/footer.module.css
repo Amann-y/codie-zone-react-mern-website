@@ -1,0 +1,40 @@
+/* Footer.module.css */
+
+.footer {
+  background-color: rgb(49, 146, 146);
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.para {
+  font-size: 1.5rem;
+}
+
+.socialIcons {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.socialIcons a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+@media (min-width:800px){
+  .para {
+    font-size: 2.5rem;
+  }
+  .socialIcons {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+}
