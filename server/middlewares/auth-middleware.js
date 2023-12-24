@@ -1,7 +1,7 @@
 const JWT = require("jsonwebtoken");
 const User = require("../models/user-model");
 
-const autthMiddleware = async (req, res, next) => {
+const authMiddleware = async (req, res, next) => {
   const token = req.header("Authorization");
   if (!token) {
     return res.status(401).json({ message: "Unathorized User, No Token" });
@@ -23,4 +23,4 @@ const autthMiddleware = async (req, res, next) => {
   }
 };
 
-module.exports = autthMiddleware;
+module.exports = authMiddleware;
