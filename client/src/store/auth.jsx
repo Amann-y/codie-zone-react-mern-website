@@ -7,6 +7,7 @@ const AppProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [userData, setUserData] = useState("");
   const [service, setServices] = useState([]);
+  const authorizationToken = `Bearer ${token}`;
 
   const storeTokenInLocalStorage = (token) => {
     setToken(token);
@@ -66,6 +67,7 @@ const AppProvider = ({ children }) => {
         isLoggedIn,
         userData,
         service,
+        authorizationToken,
       }}
     >
       {children}

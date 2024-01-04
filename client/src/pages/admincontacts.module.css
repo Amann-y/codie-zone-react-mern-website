@@ -1,0 +1,40 @@
+.outer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.card {
+  background-color: #dacbcb;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  line-height: 2rem;
+  text-align: justify;
+  margin: 20px;
+  font-size: 1.5rem;
+  max-width: 300px;
+}
+
+.button {
+  background-color: #cc9c42;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #daa532;
+}
+
+/* Add responsive styles for different screen sizes */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+  }
+}

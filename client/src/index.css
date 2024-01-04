@@ -117,3 +117,64 @@ nav ul.open {
     margin-bottom: 0.25rem;
   }
 }
+
+/* Existing styles for .table and .table th, .table td remain the same */
+
+/* Responsive styles for adminusers page*/
+@media screen and (max-width: 600px) {
+  .table {
+    overflow-x: auto;
+    display: block;
+  }
+
+  .table thead,
+  .table tbody,
+  .table th,
+  .table td,
+  .table tr {
+    display: block;
+  }
+
+  .table tbody {
+    height: calc(100vh - 200px); /* Adjust the height as needed */
+    overflow-y: auto;
+  }
+
+  .table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+  }
+
+  .table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .table td:before {
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    transform: translateY(-50%);
+  }
+
+  .table th,
+  .table td {
+    width: 100%;
+  }
+
+  .table-row {
+    padding: 15px 0;
+  }
+}
