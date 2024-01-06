@@ -7,6 +7,7 @@ const AppProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [userData, setUserData] = useState("");
   const [service, setServices] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const authorizationToken = `Bearer ${token}`;
 
   const storeTokenInLocalStorage = (token) => {
@@ -25,7 +26,9 @@ const AppProvider = ({ children }) => {
   //Jwt authentication - to get currently logged in user data
 
   const userAuthentication = async () => {
+
     try {
+      setIsLoading(true)
       const res = await fetch("http://localhost:5000/api/auth/user", {
         method: "GET",
         headers: {
@@ -34,11 +37,12 @@ const AppProvider = ({ children }) => {
       });
       if (res.ok) {
         const data = await res.json();
-        console.log(data.userData);
         setUserData(data.userData);
+        setIsLoading(false)
       }
     } catch (error) {
       console.log("Error While Fetching User Data");
+      setIsLoading(false)
     }
   };
 
@@ -68,6 +72,7 @@ const AppProvider = ({ children }) => {
         userData,
         service,
         authorizationToken,
+        isLoading
       }}
     >
       {children}

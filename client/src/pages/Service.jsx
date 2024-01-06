@@ -7,14 +7,12 @@ const Service = () => {
   const { service } = useGlobalContext();
 
   return (
-
-      <div className={styles.card_container}>
-        {service &&
-          service.map((ele) => {
-            return <Card key={ele._id} data={ele} />;
-          })}
-      </div>
-
+    <div className={styles.card_container}>
+      {service &&
+        service.map((ele) => {
+          return <Card key={ele._id} data={ele} />;
+        })}
+    </div>
   );
 };
 

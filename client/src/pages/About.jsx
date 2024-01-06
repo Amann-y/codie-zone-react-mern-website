@@ -6,8 +6,8 @@ import styles from "../styles/about.module.css";
 import { motion } from "framer-motion";
 
 const About = () => {
-  const { userData } = useGlobalContext();
-
+  const { userData, isLoading } = useGlobalContext();
+  console.log(isLoading);
   const buttonVariants = {
     rest: {
       y: 0,
@@ -19,7 +19,9 @@ const About = () => {
     },
   };
 
-  return (
+  return isLoading ? (
+    <h1>Loading...</h1>
+  ) : (
     <main>
       <section>
         <div className={styles.section_hero}>

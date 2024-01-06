@@ -4,10 +4,13 @@ import styles from "../../styles/adminlayout.module.css";
 import { useGlobalContext } from "../../store/auth";
 
 const AdminLayout = () => {
-  const { isLoggedIn } = useGlobalContext();
+  const { isLoggedIn, userData , isLoading} = useGlobalContext();
+ if(isLoading){
+return <h1>Loading...</h1>
+ }
   return (
     <>
-      {isLoggedIn ? (
+      {userData?.isAdmin ? (
         <>
           {" "}
           <header>
